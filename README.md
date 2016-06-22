@@ -1,3 +1,3 @@
 # luungoc.github.io
-This repo serves as my online portfolio
-Summer 2016
+My Online Porfolio Project
+--Summer 2016
