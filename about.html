@@ -1,4 +1,64 @@
-﻿<div class="container">
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ngoc Luu's Portfolio</title>
+    <style>
+        h1 {
+            font-family: "Raleway", sans-serif;
+            font-size: 60px;
+        }
+         html, body{
+             font-family: "Raleway", sans-serif;
+         }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: left;
+        }
+
+            li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+                li a:hover:not(.active) {
+                    background-color: #808080;
+                }
+
+        .active {
+            background-color: #8600b3;
+        }
+    </style>
+</head>
+
+<body ng-app="myPortfolio">
+    <h1>Ngoc Luu</h1>
+    <!-- Navigation bar -->
+    <ul>
+        <li><a class="active" href="index.html">HOME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="projects.html">PROJECTS</a></li>
+        <li><a href="resume.html">RESUME</a></li>
+    </ul>
+
+    <div class="container">
     <br/><br/>
     <img src="Images/CAPTURE.JPG" style="width:10%;" class="w3-round">
     <p>Hello, I'm Ngoc (pronouced as /knock/), a software developer based in greater Seattle area.<br/><br />
@@ -19,3 +79,6 @@
     </p>
 
 </div>
+
+</body>
+</html>

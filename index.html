@@ -2,10 +2,10 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Raleway">
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Ngoc Luu's Portfolio</title>
@@ -52,30 +52,11 @@
     <h1>Ngoc Luu</h1>
     <!-- Navigation bar -->
     <ul>
-        <li><a class="active" href="#index">HOME</a></li>
-        <li><a href="#about">ABOUT</a></li>
-        <li><a href="#projects">PROJECTS</a></li>
-        <li><a href="#resume">RESUME</a></li>
+        <li><a class="active" href="index.html">HOME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="projects.html">PROJECTS</a></li>
+        <li><a href="resume.html">RESUME</a></li>
     </ul>
 
-    <div ng-view></div>
-    <script>
-        var myPortfolio = angular.module("myPortfolio", ["ngRoute"]);
-        myPortfolio.config(function($routeProvider){
-            $routeProvider
-            .when("/", {
-                templateUrl : "index.html"
-            })
-            .when("/about", {
-                templateUrl : "about.html"
-            })
-            .when("/projects", {
-                templateUrl : "projects.html"
-            })
-            .when("/resume", {
-                templateUrl : "resume.html"
-            });
-         });
-    </script>
 </body>
 </html>
