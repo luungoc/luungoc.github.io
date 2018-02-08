@@ -1,106 +1,113 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Raleway">
-    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <title>Ngoc Luu's Portfolio</title>
-    <style>
-        h1 {
-            font-family: "Open Sans", sans-serif;
-            font-size: 60px;
-            color: #303F9F;
-        }
-        
-        html, body {
-             font-family: "Open Sans", sans-serif;
-        }
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Raleway">
+        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <title>Ngoc Luu's Portfolio</title>
+        <style>
+            h1 {
+                margin: 0 0 16px 8px;
+                font-family: "Open Sans", sans-serif;
+                font-size: 60px;
+                color: #303F9F;
+            }
+            
+            html, body {
+                font-family: "Open Sans", sans-serif;
+            }
 
-        div {
-            margin: 0 0 16px 8px;
-        }
+            div {
+                margin: 0 0 16px 8px;
+            }
 
-        h4 {
-            margin: 0 0 0 8px;
-            color: #3F51B5;
-        }
+            h4, h5, p {
+                margin: 0 0 0 8px;
+                color: #3F51B5;
+            }
 
-        h5 {
-            margin: 0 0 0 8px;
-            color: black;
-        }
+            ul {
+                list-style-type: none;
+                margin: 0 0 0 0;
+                padding: 0 0 0 0;
+                overflow: hidden;
+                background-color: #3F51B5;
+            }
 
-        p {
-            margin: 0 0 8px 8px;
-        }
+            li {
+                float: left;
+            }
 
-        ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background-color: #3F51B5;
-        }
+            li a {
+                    display: block;
+                    color: white;
+                    text-align: center;
+                    padding: 14px 16px;
+                    text-decoration: none;
+            }
 
-        li {
-            float: left;
-        }
+            li a:hover:not(.active) {
+                background-color: #9FA8DA;
+            }
 
-        li a {
-                display: block;
-                color: white;
-                text-align: center;
-                padding: 14px 16px;
-                text-decoration: none;
-        }
+            .active {
+                background-color: #303F9F;
+            }
+        </style>
+    </head>
 
-        li a:hover:not(.active) {
-            background-color: #9FA8DA;
-        }
+    <body ng-app="myPortfolio">
+        <h1>Ngoc Luu</h1>
 
-        .active {
-            background-color: #303F9F;
-        }
-    </style>
-</head>
+        <!-- Navigation bar -->
+        <ul>
+            <li><a class="active" href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="work.html">WORK</a></li>
+            <li><a href="projects.html">PROJECTS</a></li>
+            <li><a href="skills.html">SKILLS</a></li>
+            <li><a href="education.html">EDUCATION</a></li>
+        </ul>
 
-<body ng-app="myPortfolio">
-    <h1>Ngoc Luu</h1>
-    <!-- Navigation bar -->
-    <ul>
-        <li><a class="active" href="index.html">HOME</a></li>
-        <li><a href="about.html">ABOUT</a></li>
-        <li><a href="work.html">WORK</a></li>
-        <li><a href="projects.html">PROJECTS</a></li>
-        <li><a href="skills.html">SKILLS</a></li>
-        <li><a href="education.html">EDUCATION</a></li>
-    </ul>
-    <br/>
-    <div>
-        <h4><b>Bachelor of Science in Computer Science and Software Engineering<br/>
-            University of Washington Bothell-Bothell, WA, USA<br/></b>
-            Class of 2017
-        </h4>
-        <h5>Cumulative GPA: 3.9<br/>
-            Baccalaureate Honor: Magna Cum Laude
-            Annual Dean's List 2015-2016
-            Dean's List Autumn 2014, Winter 2014<br/>
-        </h5><br/>
+        <div>
+            <h4>
+                Bachelor of Science in Computer Science and Software Engineering-University of Washington Bothell<br/>
+            </h4>
+            <h5>
+                Bothell, WA<br/>
+                USA<br/>
+                Class of 2017
+            </h5>  
 
-        <h4><b>Associate of Arts in Business Administration<br/>
-            Seattle Central College-Seattle, WA, USA<br/></b>
-            Class of 2014
-        </h4>
-        <h5>Cumulative GPA: 3.9<br/>
-            Dean's List and President's List 2012-2014<br/>
-            Phi Theta Kappa Honor Society
-        <h5>
-    </div>
-</body>
+            <div>
+                Cumulative GPA: 3.92
+                Baccalaureate Honor: Magna Cum Laude<br/>
+                Annual Dean's List 2015-2016<br/>
+                Autumn 2014 and Winter 2014 Dean's Lists<br/>
+                
+            </div>
+
+            <h4>
+                Associate of Arts in Business Administration
+                -Seattle Central College
+            </h4>
+            <h5>
+                Seattle, WA<br/>
+                USA<br/>
+                Class of 2014
+            </h5>
+            
+            <div>
+                Cumulative GPA: 3.95<br/>
+                Phi Theta Kappa Honor Society<br/>
+                Dean's List and President's List 2012-2014
+            </div>
+        </div>
+    </body>
 </html>

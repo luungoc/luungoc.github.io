@@ -1,146 +1,218 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Raleway">
-    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <title>Ngoc Luu's Portfolio</title>
-    <style>
-        h1 {
-            margin: 0 0 0 8px;
-            font-family: "Open Sans", sans-serif;
-            font-size: 60px;
-            color: #303F9F;
-        }
-        
-        html, body {
-             font-family: "Open Sans", sans-serif;
-        }
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Raleway">
+        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <title>Ngoc Luu's Portfolio</title>
+        <style>
+            h1 {
+                margin: 0 0 0 0;
+                font-family: "Open Sans", sans-serif;
+                font-size: 60px;
+                color: #303F9F;
+            }
+            
+            html, body {
+                font-family: "Open Sans", sans-serif;
+            }
 
-        div {
-            margin: 0 0 16px 8px;
-        }
+            .unlist-items {
+                margin: 0 0 8px 8px;
+                font-family: "Open Sans", sans-serif;
+                font-size: 16px;
+                color: black;
+            }
 
-        h4 {
-            margin: 0 0 0 8px;
-            color: #3F51B5;
-        }
+            .description {
+                margin: 0 0 8px 8px;
+                font-family: "Open Sans", sans-serif;
+                font-size: 16px;
+                color: black;
+            }
 
-        h5 {
-            margin: 0 0 0 8px;
-            color: black;
-        }
+            .sub-unlist-items {
+                margin: 0 0 8px 8px;
+                font-family: "Open Sans", sans-serif;
+                font-size: 16px;
+                color: black;
+            }
 
-        p {
-            margin: 0 0 8px 8px;
-        }
+            h4, h5, h6 {
+                margin: 0 0 0 8px;
+                color:  #3F51B5;
+            }
 
-        b {
-            margin: 0 0 0 8px;
-        }
+            p {
+                margin: 0 0 0 8px;
+            }
 
-        ul {
-            list-style-type: none;
-            margin: 0 0 8px 8px;
-            padding: 0;
-            overflow: hidden;
-            background-color: #3F51B5;
-        }
+            .nav-bar {
+                list-style-type: none;
+                margin: 0 0 0 8px;
+                padding: 0;
+                overflow: hidden;
+                background-color: #3F51B5;
+            }
 
-        li {
-            float: left;
-        }
+            .nav-bar-list {
+                margin: 0 0 8px 8px;
+            }
+            
+            .time-location {
+                margin: 0 0 8px 8px;
+            }
 
-        li a {
+            span {
+                margin: 0 0 0 8px;
+            }
+
+            ul {
+                list-style-type: none;
+                margin: 0 0 24px 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: #3F51B5;
+            }
+
+            li {
+                float: left;
+            }
+
+            li a {
                 display: block;
                 color: white;
                 text-align: center;
                 padding: 14px 16px;
                 text-decoration: none;
-        }
+            }
 
-        li a:hover:not(.active) {
-            background-color: #9FA8DA;
-        }
+            li a:hover:not(.active) {
+                background-color: #9FA8DA;
+            }
 
-        .active {
-            background-color: #303F9F;
-        }
-    </style>
-</head>
+            .active {
+                background-color: #303F9F;
+            }
+        </style>
+    </head>
 
-<body ng-app="myPortfolio">
-    <h1>Ngoc Luu</h1>
-    
-    <!-- Navigation bar -->
-    <ul>
-        <li><a class="active" href="index.html">HOME</a></li>
-        <li><a href="about.html">ABOUT</a></li>
-        <li><a href="work.html">WORK</a></li>
-        <li><a href="projects.html">PROJECTS</a></li>
-        <li><a href="skills.html">SKILLS</a></li>
-        <li><a href="education.html">EDUCATION</a></li>
-    </ul>
-    <br/>
+    <body ng-app="myPortfolio">
+        <h1>Ngoc Luu</h1>
+        
+        <!-- Navigation bar -->
+        <ul>
+            <li><a class="active" href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="work.html">WORK</a></li>
+            <li><a href="projects.html">PROJECTS</a></li>
+            <li><a href="skills.html">SKILLS</a></li>
+            <li><a href="education.html">EDUCATION</a></li>
+        </ul>
 
-    <!--Job 1-->
-    <h4><b>Software Development Intern-Tyler Technologies, Inc.</b><br/>
-        <p>Renton, WA, USA<br/>
-        June 2016 - Current</p>
-    </h4>
-    <h5><b style="color: #3F51B5">Project: Employee Skills Program (ESP)</b><br/>
-        <p>As a 2016 intern project at Tyler Technologies, Inc.,<br/>
-        Employee Skills Program is an internal search engine <br/>
-        for searching employees with specific skill sets.<br/><br/></p>
+        <!--Job 2-->
+        <h4>Software Development Intern-Tyler Technologies, Inc.</h4>
+        <h5 class="time-location">
+            June 2016 - December 2016<br/>
+            Renton, WA<br/> 
+            USA
+        </h5>
+       
+        <h5>Project: Employee Skills Program (ESP)</h5>    
+        <div class="unlist-items">
+            An internal search engine for searching employees with
+            specific skill sets
+        </div>
 
-        <b style="color: #3F51B5">Project type:</b><br/>
-        <p>Full stack development<br/><br/></p>
+        <h6 style="color: #3F51B5">Project type</h6>
+        <div class="unlist-items">
+            Full stack web application
+        </div>
 
-        <b style="color: #3F51B5">My focuses:</b><br/>
-        <p>Back-end<br/>
-        Integrating front-end and back-end<br/><br/></p>  
+        <h6>Core assignments</h6>
+        <div class="sub-unlist-items">
+            Back-end services
+            Middle-end services
+        </div> 
+        
+        <h6>Tools and technologies</h6>
+        <div class="unlist-items">
+            JavaScript<br/>
+            TypeScript<br/>
+            HTML/CSS<br/>
+            C#<br/>
+            ElasticSearch<br/>
+            SQL<br/>
+            JIRA<br/>
+            Confluence<br/>
+            BitBucket<br/>
+            Git<br/>
+        </div>
 
-        <b style="color: #3F51B5">Tools and technologies:</b><br/>
-        <p>ElasticSearch, ElasticSearch.NET,<br/>
-        JavaScript, TypeScript, HTML/CSS, Elastic Nest, C#, and SQL<br/>
-        JIRA, Confluence, BitBucket, Git<br/><br/></p>
+        <h6>Skills obtained</h6>    
+        <div class="unlist-items">
+            Full stack development
+            Pair programming
+            SCRUM Master
+        </div>
+        
+        <!--Job 3-->
+        <h4>
+            Computer Science Tutor
+            -Quantitative Skills Center
+            -University of Washington Bothell
+        </h4>
+        
+        <h5 class="time-location">
+            September 2015 - June 2016<br/>
+            Bothell, WA</br>
+            USA
+        </h5>
 
-        <b style="color: #3F51B5">Skills obtained:</b><br/>
-        <p>Full stack development<br/>
-        Pair programming<br/>
-        SCRUM Master</p>
-    </h5><br/>
+        <div class="description">
+            Assisting students with data structures, algorithms, 
+            discrete maths, and debugging techniques
+        </div>
+        <h5>Specialization</h5>
+        <div class="unlist-items">
+            Java<br/>
+            C++<br/>
+            SQLite<br/>
+        </div>
+        
+        <!--Job 4-->
+        <h4>Peer Tutor
+            -Quantitative Skills Center
+            -University of Washington Bothell
+        </h4>
 
-    <!--Job 2-->
-    <h4><b>Computer Science Tutor-Quantitative Skills Center</b><br/>
-        <b>University of Washington Bothell</b><br/>  
-        <p>Bothell, WA, USA<br/>
-        Sep 2015 - June 2016</p>
-    </h4>
+        <h5 class="time-location">
+            January 2015 - June 2016<br/>
+            Bothell, WA<br/>
+            USA
+        </h5>
 
-    <h5><b>Specialized in</b> Java, C++, and SQLite<br/><br/>
-        <p>Assisting students with data structures, algorithms,<br/> 
-        discrete math, and debugging techniques<br/></p>
-    <h5><br/>
+        <div class="description">
+            Assisting students with understanding quantitativeconcepts,
+            enhancing independent learning process, and building confidence
+            in quantitative materials
+        </div>
 
-    <!--Job 3-->
-    <h4><b>Peer Tutor-Quantitative Skills Center</b><br/>
-        <b>University of Washington Bothell</b><br/>  
-        <p>Bothell, WA, USA<br/>
-        Jan 2015 - June 2016</p>
-    </h4>
-
-    <h5><b>Specialized in</b> Java, C++, SQLite, Statistics, Calculus,<br/> 
-        <p>Financial & Managerial Accounting, and Economics<br/><br/>
-        Assisting students with understanding quantitative<br/>
-        concepts, enhancing independent learning process,<br/>
-        and building confidence in quantitative materials<br/></p>
-    <h5>
-</body>
+        <h5>Specialization</h5> 
+        <div class="unlist-items">
+            Java<br/>
+            C++<br/>
+            SQLite<br/>
+            Statistics<br/>
+            Calculus<br/>
+            Financial & Managerial Accounting<br/>
+            Economics<br/>
+        </div>
+    </body>
 </html>
